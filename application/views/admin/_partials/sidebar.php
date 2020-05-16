@@ -1,3 +1,4 @@
+<body class="hold-transition skin-green sidebar-mini">
 <!-- Left side column. contains the logo and sidebar -->
 <aside class="main-sidebar">
     <!-- sidebar: style can be found in sidebar.less -->
@@ -27,38 +28,20 @@
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">MAIN MENU</li>
         <li class="active treeview">
-          <a href="#">
+        <a href="#">
             <i class="glyphicon glyphicon-home"></i> <span>Dashboard</span>
           </a>
         <li class="treeview">
-          <a href="#">
+        <a href="<?php echo base_url()?>admin/SuratMasuk">
             <i class="fa fa-inbox"></i>
             <span>Surat Masuk</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
           </a>
-          <ul class="treeview-menu">
-            <li><a href="<?php echo base_url();?>assets/admin/pages/layout/top-nav.html"><i class="fa fa-circle-o"></i> Top Navigation</a></li>
-            <li><a href="<?php echo base_url();?>assets/admin/pages/layout/boxed.html"><i class="fa fa-circle-o"></i> Boxed</a></li>
-            <li><a href="<?php echo base_url();?>assets/admin/pages/layout/fixed.html"><i class="fa fa-circle-o"></i> Fixed</a></li>
-            <li><a href="<?php echo base_url();?>assets/admin/pages/layout/collapsed-sidebar.html"><i class="fa fa-circle-o"></i> Collapsed Sidebar</a></li>
-          </ul>
         </li>
         <li class="treeview">
-          <a href="#">
+          <a href="<?php echo base_url()?>admin/SuratKeluar">
             <i class="glyphicon glyphicon-envelope"></i>
             <span>Surat Keluar</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
           </a>
-          <ul class="treeview-menu">
-            <li><a href="<?php echo base_url();?>assets/admin/pages/charts/chartjs.html"><i class="fa fa-circle-o"></i> ChartJS</a></li>
-            <li><a href="<?php echo base_url();?>assets/admin/pages/charts/morris.html"><i class="fa fa-circle-o"></i> Morris</a></li>
-            <li><a href="<?php echo base_url();?>assets/admin/pages/charts/flot.html"><i class="fa fa-circle-o"></i> Flot</a></li>
-            <li><a href="<?php echo base_url();?>assets/admin/pages/charts/inline.html"><i class="fa fa-circle-o"></i> Inline charts</a></li>
-          </ul>
         </li>
         <li class="treeview">
           <a href="#">
@@ -69,20 +52,25 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="#"><i class="fa fa-circle-o"></i> Surat Aktif Kuliah</a></li>
-            <li><a href="#"><i class="fa fa-circle-o"></i> Surat KKN</a></li>
-            <li><a href="#"><i class="fa fa-circle-o"></i> Surat Sidang</a></li>
-            <li><a href="#"><i class="fa fa-circle-o"></i> Surat Komprehensif</a></li>
-            <li><a href="#"><i class="fa fa-circle-o"></i> Surat Izin KP</a></li>
-            <li><a href="#"><i class="fa fa-circle-o"></i> Surat Beasiswa</a></li>
+            <li><a href="<?php echo base_url()?>admin/SuratKp"><i class="fa fa-circle-o"></i> Surat Izin KP</a></li>
           </ul>
         </li>
         <li class="treeview">
           <a href="#">
-            <i class="glyphicon glyphicon-print"></i>
-            <span>Print</span>
+            <i class="fa fa-users"></i>
+            <span>Data Pegawai</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
           </a>
-        </li>
+          <ul class="treeview-menu">
+            <li><a href="<?php echo base_url()?>admin/TabelDekan"><i class="fa fa-circle-o"></i> Dekan</a></li>
+            <li><a href="<?php echo base_url()?>admin/TabelWadek"><i class="fa fa-circle-o"></i> Wakil Dekan</a></li>
+            <li><a href="<?php echo base_url()?>admin/TabelKajur"><i class="fa fa-circle-o"></i> Ketua Jurusan</a></li>
+            <li><a href="<?php echo base_url()?>admin/TabelDosen"><i class="fa fa-circle-o"></i> Dosen</a></li>
+          </ul>
+        </>
     </section>
     <!-- /.sidebar -->
   </aside>
+  </body>
