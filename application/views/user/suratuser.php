@@ -30,12 +30,12 @@
 
           <div id="page-wrapper">
             <div class="container-fluid">
-    <div class="row">
+    
         <form action="<?php echo base_url().'admin/SuratKp/add'; ?>" method="post">
             <div class="col-md-12">
                 <div class="form-group">
                     <label for="InputTujuan">Nomor Surat</label>
-                    <input type="text" class="form-control" id="InputNomorSurat" placeholder="Nomor Surat" value="B-<?php echo sprintf("%04s", $no_surat);?>/Un.05/III.7/PP.00.9/<?php  echo date('m');?>/<?php echo date('Y');?>"name="no_surat" readonly>
+                    <input type="text" class="form-control" id="InputNomorSurat" placeholder="Nomor Surat" value="B-<?php echo sprintf("%04s", $no_surat);?>Un.05III.7PP.00.9<?php  echo date('m');?><?php echo date('Y');?>"name="no_surat" readonly>
                 </div>
                 <div class="form-group">
                     <label for="InputTanggal">Tanggal Surat</label>
@@ -47,7 +47,7 @@
                 </div>
                 <div class="form-group">
                     <label for="InputNomorSurat">Nama Lengkap</label>
-                        <input type="text" class="form-control" id="InputNomorSurat" placeholder="Nama Instansi" name="nama_lengkap">
+                        <input type="text" class="form-control" id="InputNomorSurat" placeholder="Nama Lengkap" name="nama_lengkap">
                 </div>
                 <div class="form-group">
                     <label for="InputPerihal">NIM</label>
@@ -64,7 +64,7 @@
                           <option>Fisika</option>
                           <option>Kimia</option>
                     </select>
-</div>
+                </div>
                 <div class="form-group">
                     <label for="InputPerihal">Semester</label>
                         <input type="text" class="form-control"  placeholder="Semester" name="semester">
@@ -82,12 +82,10 @@
                         <input type="date" class="form-control"  placeholder="Sampai Dengan" name="akhir_tgl">
                 </div>
                 
-                    <button type="submit" class="btn btn-default">Submit</button>
-                
+                    <button type="submit" class="btn btn-success col-md-12">Submit</button>        
       </form>
         </div>
         <!-- /.container-fluid -->
-
       </div>
       <!-- End of Main Content -->
 

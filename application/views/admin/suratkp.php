@@ -69,8 +69,8 @@
                 <td><?php echo $surat_kp->mulai_tgl ?></td>
                 <td><?php echo $surat_kp->akhir_tgl ?></td>
                 <td>
-                    <a href="<?= base_url()?>admin/SuratKp/edit_form" class="btn btn-warning" role="button" title="Ubah Data"><i class="glyphicon glyphicon-edit"></i></a>
-                    <a href="#" class="btn btn-danger" role="button" title="Hapus Data"><i class="glyphicon glyphicon-trash"></i></a>
+                    <a href="<?php echo base_url('admin/SuratKp/edit_form/'.$surat_kp->no_surat)?>" class="btn btn-warning" role="button" title="Ubah Data"><i class="glyphicon glyphicon-edit"></i></a>
+                    <a href="<?php echo base_url('admin/SuratKp/hapus/'.$surat_kp->no_surat)?>" class="btn btn-danger" role="button" title="Hapus Data"><i class="glyphicon glyphicon-trash"></i></a>
                     <a href="#"class="btn btn-success target="_blank"><i class="glyphicon glyphicon-print"></i></a>
                 </td>
                 </tr>

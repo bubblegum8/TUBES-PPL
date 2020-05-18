@@ -29,31 +29,32 @@
             </div>
             <!-- /.box-header -->
             <div class="box-body">
-              <form role="form" action="" method="post">
+            <?php foreach($surat_kp as $surat){ ?>
+              <form role="form" action="<?php echo base_url(). 'admin/SuratKp/update'; ?>" method="post">
               <div class="form-group">
                   <label>Nomor Surat</label>
-                  <input type="text" name="no_surat" class="form-control" placeholder="Enter ..." readonly>
+                  <input type="text" name="no_surat" class="form-control" value="<?php echo $surat->no_surat ?>" readonly>
                 </div>
                 <div class="form-group">
                     <label for="InputTanggal">Tanggal Surat</label>
-                        <input type="date" class="form-control" id="InputTanggal" placeholder="Tanggal" name="tanggal_surat">
+                        <input type="date" class="form-control" id="InputTanggal" value="<?php echo $surat->tanggal_surat ?>" name="tanggal_surat">
                 </div>
-                <!-- textarea -->
+            
                 <div class="form-group">
-                  <label>Nama Intansi dan Alamat</label>
-                  <textarea class="form-control" rows="3" placeholder="Nama Intansi dan Alamat"></textarea>
+                    <label for="InputNomorSurat">Nama Intansi dan Alamat</label>
+                        <input type="text" class="form-control" id="InputNomorSurat"name="nama_intansi" value="<?php echo $surat->nama_intansi ?>">
                 </div>
                 <div class="form-group">
                     <label for="InputNomorSurat">Nama Lengkap</label>
-                        <input type="text" class="form-control" id="InputNomorSurat" placeholder="Nama Lengkap" name="nama_lengkap">
+                        <input type="text" class="form-control" id="InputNomorSurat" value="<?php echo $surat->nama_lengkap?>" name="nama_lengkap">
                 </div>
                 <div class="form-group">
                     <label for="InputPerihal">NIM</label>
-                        <input type="text" class="form-control"  placeholder="NIM" name="nim">
+                        <input type="text" class="form-control"  value="<?php echo $surat->nim ?>" name="nim">
                 </div>
                 <div class="form-group">
                     <label for="InputStatusSurat">Jurusan</label>
-                    <select class="form-control" name="jurusan">
+                    <select class="form-control" name="jurusan" value="<?php echo $surat->jurusan ?>">
                           <option>Teknik Informatika</option>
                           <option>Teknik Elektro</option>
                           <option>Matematika</option>
@@ -65,22 +66,23 @@
                 </div>
                 <div class="form-group">
                     <label for="InputPerihal">Semester</label>
-                        <input type="text" class="form-control"  placeholder="Semester" name="semester">
+                        <input type="text" class="form-control"  value="<?php echo $surat->semester ?>" name="semester">
                 </div>
                 <div class="form-group">
                     <label for="InputPerihal">Lamanya</label>
-                        <input type="text" class="form-control"  placeholder="Lama Magang" name="lamanya">
+                        <input type="text" class="form-control"  value="<?php echo $surat->lamanya ?>" name="lamanya">
                 </div>
                 <div class="form-group">
                     <label for="InputPerihal">Mulai Dari</label>
-                        <input type="date" class="form-control"  placeholder="NIM" name="mulai_tgl">
+                        <input type="date" class="form-control"  value="<?php echo $surat->mulai_tgl ?>" name="mulai_tgl">
                 </div>
                 <div class="form-group">
                     <label for="InputPerihal">Sampai</label>
-                        <input type="date" class="form-control"  placeholder="Sampai Dengan" name="akhir_tgl">
+                        <input type="date" class="form-control"  value="<?php echo $surat->akhir_tgl ?>" name="akhir_tgl">
                 </div>
                     <button type="submit" class="btn btn-warning">Submit</button>
               </form>
+              <?php } ?>
             </div>
             <!-- /.box-body -->
           </div>

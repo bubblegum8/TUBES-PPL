@@ -41,7 +41,48 @@ public function index()
         $this->session->set_flashdata('success', 'Berhasil disimpan');
 		redirect('user/Dashboard/index');
     }
-    public function edit_form(){
-        $this->load->view("user/edit_form_suratKP");
+    function hapus($no_surat){
+		$where = array('no_surat' => $no_surat);
+		$this->surat_model->hapus_data($where,'surat_kp');
+		redirect('admin/SuratKp/index');
+	}
+ 
+	function edit_form($no_surat){
+		$where = array('no_surat' => $no_surat);
+        $data['surat_kp'] = $this->surat_model->edit_data($where,'surat_kp')->result();
+		$this->load->view('admin/edit_form_suratKP',$data);
+	}
+    function update(){
+        $no_surat = $this->input->post('no_surat');
+		$tanggal_surat = $this->input->post('tanggal_surat');
+        $nama_intansi = $this->input->post('nama_intansi');
+        $nama_lengkap=$this->input->post('nama_lengkap');
+        $nim=$this->input->post('nim');
+        $jurusan=$this->input->post('jurusan');
+        $semester=$this->input->post('semester');
+        $lamanya=$this->input->post('lamanya');
+        $mulai_tgl=$this->input->post('mulai_tgl');
+        $akhir_tgl=$this->input->post('akhir_tgl');
+ 
+		$data = array(
+			
+			'tanggal_surat' => $tanggal_surat,
+            'nama_intansi' => $nama_intansi,
+            'nama_lengkap' => $nama_lengkap,
+            'nim' => $nim,
+            'jurusan' => $jurusan,
+            'semester' => $semester,
+            'lamanya' => $lamanya,
+            'mulai_tgl' => $mulai_tgl,
+            'akhir_tgl' => $akhir_tgl,
+			);
+     
+        $where = array(
+            'no_surat' => $no_surat
+        );
+     
+        $this->surat_model->update_data($where,$data,'surat_kp');
+        redirect('admin/SuratKp/index');
     }
+
 }
