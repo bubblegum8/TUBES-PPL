@@ -56,6 +56,7 @@
                 </tr>
                 </thead>
                 <tbody>
+                <tr>
                 <?php foreach ($surat_kp as $surat_kp): ?>
                 <td><?php echo $surat_kp->no_surat ?></td>
                 <td><?php echo $surat_kp->tanggal_surat ?></td>
@@ -68,10 +69,11 @@
                 <td><?php echo $surat_kp->mulai_tgl ?></td>
                 <td><?php echo $surat_kp->akhir_tgl ?></td>
                 <td>
-                    <a href="#" class="btn btn-success" role="button" title="Ubah Data"><i class="glyphicon glyphicon-edit"></i></a>
+                    <a href="<?= base_url()?>admin/SuratKp/edit_form" class="btn btn-warning" role="button" title="Ubah Data"><i class="glyphicon glyphicon-edit"></i></a>
                     <a href="#" class="btn btn-danger" role="button" title="Hapus Data"><i class="glyphicon glyphicon-trash"></i></a>
-                    <a href="#"class="btn btn-warning" target="_blank"><i class="glyphicon glyphicon-print"></i></a>
+                    <a href="#"class="btn btn-success target="_blank"><i class="glyphicon glyphicon-print"></i></a>
                 </td>
+                </tr>
                 <?php endforeach; ?>
                 </tbody>
             </table>

@@ -12,4 +12,10 @@ class surat_model extends CI_Model
     function save($data,$table){
         $this->db->insert($table,$data);
     }
+    public function ceknosurat()
+    {
+        $query = $this->db->query("SELECT MAX(no_surat) as no_surat from surat_kp");
+        $hasil = $query->row();
+        return $hasil->no_surat;
+    }
 }

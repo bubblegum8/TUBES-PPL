@@ -9,6 +9,7 @@ function __construct() {
 }
 public function index()
     {
+       
         $data["surat_kp"] = $this->surat_model->getAll()->result();
         $this->load->view("admin/suratkp",$data);   
     }
@@ -39,5 +40,8 @@ public function index()
         $this->surat_model->save($data,'surat_kp');
         $this->session->set_flashdata('success', 'Berhasil disimpan');
 		redirect('user/Dashboard/index');
+    }
+    public function edit_form(){
+        $this->load->view("user/edit_form_suratKP");
     }
 }
