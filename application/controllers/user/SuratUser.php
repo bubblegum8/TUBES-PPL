@@ -11,6 +11,6 @@ class SuratUser extends CI_Controller {
 
     }
 
-
+    
 
 }

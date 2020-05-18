@@ -42,31 +42,37 @@
             <table id="mahasiswa" class="table table-bordered table-hover">
                 <thead>
                 <tr>
-                <th>NO</th>
-                <th>Tgl Masuk</th>
-                <th>Tgl Surat/No. Surat/Perihal/Lampiran</th>
-                <th>Kode Surat</th>
-                <th>Asal Surat</th>
+                <th>No Surat</th>
+                <th>Tgl Surat</th>
+                <th>Nama Intansi</th>
+                <th>Nama Lengkap</th>
+                <th>NIM</th>
                 <th>Jurusan</th>
-                <th>Lampiran</th>
+                <th>Semester</th>
+                <th>Lamanya</th>
+                <th>Mulai Dari</th>
+                <th>Sampai</th>
                 <th>AKSI</th>
                 </tr>
                 </thead>
                 <tbody>
-                <td>1</td>
-                <td>16/05/2020</td>
-                <td>Tgl Surat: 22/06/2020
-                    No. Surat: 243/UIN/PW02
-                    Perihal: Surat KP
-                </td>
-                <td>14045</td>
-                <td>UIN SGD BANDUNG</td>
-                <td>Teknik Informatika</td>
-                <td>Upload PDF</td>
+                <?php foreach ($surat_kp as $surat_kp): ?>
+                <td><?php echo $surat_kp->no_surat ?></td>
+                <td><?php echo $surat_kp->tanggal_surat ?></td>
+                <td><?php echo $surat_kp->nama_intansi ?></td>
+                <td><?php echo $surat_kp->nama_lengkap ?></td>
+                <td><?php echo $surat_kp->nim ?></td>
+                <td><?php echo $surat_kp->jurusan ?></td>
+                <td><?php echo $surat_kp->semester ?></td>
+                <td><?php echo $surat_kp->lamanya ?></td>
+                <td><?php echo $surat_kp->mulai_tgl ?></td>
+                <td><?php echo $surat_kp->akhir_tgl ?></td>
                 <td>
                     <a href="#" class="btn btn-success" role="button" title="Ubah Data"><i class="glyphicon glyphicon-edit"></i></a>
                     <a href="#" class="btn btn-danger" role="button" title="Hapus Data"><i class="glyphicon glyphicon-trash"></i></a>
+                    <a href="#"class="btn btn-warning" target="_blank"><i class="glyphicon glyphicon-print"></i></a>
                 </td>
+                <?php endforeach; ?>
                 </tbody>
             </table>
         <ul class="pagination pagination-sm no-margin pull-right">

@@ -31,63 +31,60 @@
           <div id="page-wrapper">
             <div class="container-fluid">
     <div class="row">
-        <form role="form">
-            <div class="col-lg-6">
+        <form action="<?php echo base_url().'admin/SuratKp/add'; ?>" method="post">
+            <div class="col-md-12">
                 <div class="form-group">
-                    <label for="InputTujuan">Tujuan</label>
-                    <select class="form-control">
-                          <option>Rektor</option>
-                          <option>Wakil Rektor Bidang Akademik</option>
-                          <option>Wakil Rektor Bidang Keuangan dan Kepegawaian</option>
-                          <option>Wakil Rektor Bidang Kemahasiswaan</option>
-                          <option>Wakil Rektor Bidang Kerjasama dan Humas</option>
+                    <label for="InputTujuan">Nomor Surat</label>
+                    <input type="text" class="form-control" id="InputNomorSurat" placeholder="Nomor Surat" name="no_surat">
+                </div>
+                <div class="form-group">
+                    <label for="InputTanggal">Tanggal Surat</label>
+                        <input type="date" class="form-control" id="InputTanggal" placeholder="Tanggal" name="tanggal_surat">
+                </div>
+                <div class="form-group">
+                    <label for="InputNomorSurat">Nama Intansi</label>
+                        <input type="text" class="form-control" id="InputNomorSurat" placeholder="Nama Instansi" name="nama_intansi">
+                </div>
+                <div class="form-group">
+                    <label for="InputNomorSurat">Nama Lengkap</label>
+                        <input type="text" class="form-control" id="InputNomorSurat" placeholder="Nama Instansi" name="nama_lengkap">
+                </div>
+                <div class="form-group">
+                    <label for="InputPerihal">NIM</label>
+                        <input type="text" class="form-control"  placeholder="NIM" name="nim">
+                </div>
+                <div class="form-group">
+                    <label for="InputStatusSurat">Jurusan</label>
+                    <select class="form-control" name="jurusan">
+                          <option>Teknik Informatika</option>
+                          <option>Teknik Elektro</option>
+                          <option>Matematika</option>
+                          <option>Agroteknologi</option>
+                          <option>Biologi</option>
+                          <option>Fisika</option>
+                          <option>Kimia</option>
                     </select>
+</div>
+                <div class="form-group">
+                    <label for="InputPerihal">Semester</label>
+                        <input type="text" class="form-control"  placeholder="Semester" name="semester">
                 </div>
                 <div class="form-group">
-                    <label for="InputTanggal">Tanggal</label>
-                        <input type="date" class="form-control" id="InputTanggal" placeholder="Tanggal">
+                    <label for="InputPerihal">Lamanya</label>
+                        <input type="text" class="form-control"  placeholder="Lama Magang" name="lamanya">
                 </div>
                 <div class="form-group">
-                    <label for="InputNomorSurat">Nomor Surat</label>
-                        <input type="text" class="form-control" id="InputNomorSurat" placeholder="Nomor Surat">
+                    <label for="InputPerihal">Mulai Dari</label>
+                        <input type="date" class="form-control"  placeholder="NIM" name="mulai_tgl">
                 </div>
                 <div class="form-group">
-                    <label for="InputLampian">Lampiran</label>
-                    <select class="form-control">
-                          <option>1 Lampiran</option>
-                          <option>2 Lampiran</option>
-                          <option>3 Lampiran</option>
-                          <option>4 Lampiran</option>
-                          <option>5 Lampiran</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="InputPerihal">Perihal</label>
-                        <input type="text" class="form-control" id="InputPerihal" placeholder="Perihal">
-                </div>
-                <div class="form-group">
-                    <label for="InputStatusSurat">Status Surat</label>
-                    <select class="form-control">
-                          <option>1 Penting</option>
-                          <option>2 Rahasia</option>
-                          <option>3 Segera</option>
-                          <option>4 Biasa</option>
-                    </select>
-                </div>
-                <div style="position:relative;">
-                    <a class='btn btn-primary' href='javascript:;'>
-                        Unggah Data.
-                        <input type="file" style='position:absolute;z-index:2;top:0;left:0;filter: alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";opacity:0;background-color:transparent;color:transparent;' name="file_source" size="40"  onchange='$("#upload-file-info").html($(this).val());'>
-                    </a>
-                    &nbsp;
-                   <span class='label label-info' id="upload-file-info"></span>
+                    <label for="InputPerihal">Sampai</label>
+                        <input type="date" class="form-control"  placeholder="Sampai Dengan" name="akhir_tgl">
                 </div>
                 
-                
-                <div>
                     <button type="submit" class="btn btn-default">Submit</button>
-                </div> 
-
+                
+      </form>
         </div>
         <!-- /.container-fluid -->
 
@@ -102,11 +99,9 @@
 
   </div>
   <!-- End of Page Wrapper -->
-
   <?php $this->load->view("user/_partials/scrolltop.php") ?>
   <?php $this->load->view("user/_partials/modal.php") ?>
   <?php $this->load->view("user/_partials/js.php") ?>
-
 </body>
 
 </html>
