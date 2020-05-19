@@ -73,7 +73,7 @@
                 <td>
                     <a href="<?php echo base_url('admin/SuratKp/edit_form/'.$surat_kp->no_surat)?>" class="btn btn-warning" role="button" title="Ubah Data"><i class="glyphicon glyphicon-edit"></i></a>
                     <a href="<?php echo base_url('admin/SuratKp/hapus/'.$surat_kp->no_surat)?>" class="btn btn-danger" role="button" title="Hapus Data"><i class="glyphicon glyphicon-trash"></i></a>
-                    <a href="#"class="btn btn-success target="_blank"><i class="glyphicon glyphicon-print"></i></a>
+                    <a href="<?php echo base_url('admin/Cetak/index/'.$surat_kp->no_surat)?>" target="_blank" class="btn btn-success target="_blank"><i class="glyphicon glyphicon-print"></i></a>
                 </td>
                 </tr>
                 <?php endforeach; ?>
