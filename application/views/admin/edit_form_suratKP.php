@@ -46,7 +46,7 @@
                 </div>
                 <div class="form-group">
                     <label for="InputNomorSurat">Alamat Intansi</label>
-                        <input type="text" class="form-control" id="InputNomorSurat"name="nama_intansi" value="<?php echo $surat->alamat_intansi ?>">
+                        <input type="text" class="form-control" id="InputNomorSurat"name="alamat_intansi" value="<?php echo $surat->alamat_intansi ?>">
                 </div>
                 <div class="form-group">
                     <label for="InputNomorSurat">Nama Lengkap</label>
