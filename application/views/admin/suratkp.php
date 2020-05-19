@@ -45,6 +45,7 @@
                 <th>No Surat</th>
                 <th>Tgl Surat</th>
                 <th>Nama Intansi</th>
+                <th>Alamat Intansi</th>
                 <th>Nama Lengkap</th>
                 <th>NIM</th>
                 <th>Jurusan</th>
@@ -61,6 +62,7 @@
                 <td><?php echo $surat_kp->no_surat ?></td>
                 <td><?php echo $surat_kp->tanggal_surat ?></td>
                 <td><?php echo $surat_kp->nama_intansi ?></td>
+                <td><?php echo $surat_kp->alamat_intansi ?></td>
                 <td><?php echo $surat_kp->nama_lengkap ?></td>
                 <td><?php echo $surat_kp->nim ?></td>
                 <td><?php echo $surat_kp->jurusan ?></td>

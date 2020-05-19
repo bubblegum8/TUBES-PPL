@@ -46,6 +46,10 @@
                         <input type="text" class="form-control" id="InputNomorSurat" placeholder="Nama Instansi" name="nama_intansi">
                 </div>
                 <div class="form-group">
+                    <label for="InputNomorSurat">Alamat Intansi</label>
+                        <input type="text" class="form-control" id="InputNomorSurat" placeholder="Nama Instansi" name="alamat_intansi">
+                </div>
+                <div class="form-group">
                     <label for="InputNomorSurat">Nama Lengkap</label>
                         <input type="text" class="form-control" id="InputNomorSurat" placeholder="Nama Lengkap" name="nama_lengkap">
                 </div>
