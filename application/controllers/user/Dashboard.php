@@ -12,13 +12,18 @@ class Dashboard extends CI_Controller {
         if($this->admin->is_role() != "user"){
             redirect("login/");
         }
+        $this->load->library('pdf');
+        $this->load->model("surat_model");
     }
 
     public function index()
     {
-
-        $this->load->view("user/dashboard");            
-
+        $dariDB = $this->surat_model->ceknosurat();
+        // contoh JRD0004, angka 3 adalah awal pengambilan angka, dan 4 jumlah angka yang diambil
+        $nourut =(int) substr($dariDB, 3, 4);
+        $noSuratSekarang = $nourut + 1;
+        $data = array('no_surat' => $noSuratSekarang);
+        $this->load->view("user/suratuser",$data); 
     }
 
     public function logout()

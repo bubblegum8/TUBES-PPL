@@ -10,7 +10,6 @@
   <!-- Page Wrapper -->
   <div id="wrapper">
 
-  <?php $this->load->view("user/_partials/sidebar.php") ?>
 
     <!-- Content Wrapper -->
     <div id="content-wrapper" class="d-flex flex-column">
@@ -25,13 +24,13 @@
 
           <!-- Page Heading -->
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Buat Surat</h1>
+            <h1 class="h3 mb-0 form-judul text-gray-800">Buat Surat</h1>
           </div>
 
           <div id="page-wrapper">
             <div class="container-fluid">
     
-        <form action="<?php echo base_url().'admin/SuratKp/add'; ?>" method="post">
+        <form action="<?php echo base_url().'admin/SuratKp/add'; ?>" method="post" class="col-lg-5 col-md-8 col-sm-12 form">
             <div class="col-md-12">
                 <div class="form-group">
                     <label for="InputTujuan">Nomor Surat</label>

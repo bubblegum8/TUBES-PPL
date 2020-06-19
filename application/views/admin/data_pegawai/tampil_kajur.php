@@ -14,7 +14,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
     <h1>
-        DATA KETUA JURUSAN 
+        DATA KETUA JURUSAN
     </h1>
     <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
@@ -27,7 +27,7 @@
         <div class="col-xs-12">
     <div class="box box-primary">
         <div class="box-header">
-        <a href="#" class="btn btn-primary" role="button" title="Tambah Data"><i class="glyphicon glyphicon-plus"></i> Tambah</a>
+        <a href="<?php echo site_url('admin/TabelKajur/add') ?>" class="btn btn-primary" role="button" title="Tambah Data"><i class="glyphicon glyphicon-plus"></i> Tambah</a>
         <div class="box-tools">
                 <div class="input-group input-group-sm hidden-xs" style="width: 150px;">
                 <input type="text" name="table_search" class="form-control pull-right" placeholder="Search">
@@ -43,7 +43,6 @@
             <table id="mahasiswa" class="table table-bordered table-hover">
                 <thead>
                 <tr>
-                <th>NO</th>
                 <th>NIP</th>
                 <th>NAMA</th>
                 <th>JURUSAN</th>
@@ -53,16 +52,29 @@
                 </tr>
                 </thead>
                 <tbody>
-                <td>1</td>
-                <td>999872123123</td>
-                <td>M Iqbal Hadad</td>
-                <td>TEKNIK INFORMATIKA</td>
-                <td>Jln. Gelatik Dalam</td>
-                <td>+6587812345123</td>
-                <td>
-                    <a href="#" class="btn btn-success" role="button" title="Ubah Data"><i class="glyphicon glyphicon-edit"></i></a>
-                    <a href="#" class="btn btn-danger" role="button" title="Hapus Data"><i class="glyphicon glyphicon-trash"></i></a>
-                </td>
+                <?php foreach ($kajur as $kajur): ?>
+                <tr>
+                    <td>
+                        <?php echo $kajur->nip ?>
+                    </td>
+                    <td>
+                        <?php echo $kajur->nama ?>
+                    </td>
+                    <td>
+                        <?php echo $kajur->jurusan ?>
+                    </td>
+                    <td>
+                        <?php echo $kajur->alamat ?>
+                    </td>
+                    <td>
+                        <?php echo $kajur->telp ?>
+                    </td>
+                    <td>
+                        <a href="<?php echo site_url('admin/TabelKajur/edit/' .$kajur->id_kajur) ?>" class="btn btn-success" role="button" title="Ubah Data"><i class="glyphicon glyphicon-edit"></i></a>
+                        <a href="<?php echo site_url('admin/TabelKajur/delete/'.$kajur->id_kajur) ?>" class="btn btn-danger" role="button" title="Hapus Data"><i class="glyphicon glyphicon-trash"></i></a>
+                    </td>
+                </tr>
+                <?php endforeach; ?>
                 </tbody>
             </table>
         <ul class="pagination pagination-sm no-margin pull-right">

@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>Login - CodeIgniter</title>
+    <title>Login</title>
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <style>
         .form-signin
@@ -55,7 +55,7 @@
         .login-title
         {
             color: #555;
-            font-size: 18px;
+            font-size: 24px;
             font-weight: 400;
             display: block;
         }
@@ -78,13 +78,17 @@
             display: block;
             margin-top: 10px;
         }
+        .ingat
+        {
+            padding-left:20px;
+        }
     </style>
 </head>
 <body>
 <div class="container" style="margin-top: 50px">
     <div class="row">
         <div class="col-sm-6 col-md-4 col-md-offset-4">
-            <h1 class="text-center login-title">Masuk Administrator</h1>
+            <h1 class="text-center login-title">Masuk</h1>
             <?php if(isset($error)) { echo $error; }; ?>
             <div class="account-wall">
                 <img class="profile-img" src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=120"
@@ -102,14 +106,13 @@
                 <button class="btn btn-lg btn-primary btn-block" name="btn-login" id="btn-login" type="submit">
                     Masuk</button>
 
-                <label class="checkbox pull-left">
+                <label class="checkbox pull-left ingat">
                     <input type="checkbox" value="remember-me">
-                    Ingatkan Saya
+                    Ingat Saya
                 </label>
-                <a href="#" class="pull-right need-help">Butuh bantuan? </a><span class="clearfix"></span>
+<span class="clearfix"></span>
                 </form>
             </div>
-            <a href="#" class="text-center new-account">Buat Akun </a>
             <div id="error" style="margin-top: 10px"></div>
         </div>
     </div>
