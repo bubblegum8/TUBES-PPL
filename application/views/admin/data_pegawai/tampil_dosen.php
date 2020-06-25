@@ -27,7 +27,7 @@
         <div class="col-xs-12">
     <div class="box box-primary">
         <div class="box-header">
-        <a href="#" class="btn btn-primary" role="button" title="Tambah Data"><i class="glyphicon glyphicon-plus"></i> Tambah</a>
+        <a href="<?php echo site_url('admin/TabelDosen/add') ?>" class="btn btn-primary" role="button" title="Tambah Data"><i class="glyphicon glyphicon-plus"></i> Tambah</a>
         <div class="box-tools">
                 <div class="input-group input-group-sm hidden-xs" style="width: 150px;">
                 <input type="text" name="table_search" class="form-control pull-right" placeholder="Search">
@@ -43,7 +43,6 @@
             <table id="mahasiswa" class="table table-bordered table-hover">
                 <thead>
                 <tr>
-                <th>NO</th>
                 <th>NIP</th>
                 <th>NAMA</th>
                 <th>JURUSAN</th>
@@ -53,16 +52,29 @@
                 </tr>
                 </thead>
                 <tbody>
-                <td>1</td>
-                <td>44444444123123</td>
-                <td>Sholihah</td>
-                <td>TEKNIK INFORMATIKA</td>
-                <td>Jln. Wall Street 123</td>
-                <td>08970961233</td>
-                <td>
-                    <a href="#" class="btn btn-success" role="button" title="Ubah Data"><i class="glyphicon glyphicon-edit"></i></a>
-                    <a href="#" class="btn btn-danger" role="button" title="Hapus Data"><i class="glyphicon glyphicon-trash"></i></a>
-                </td>
+                <?php foreach ($dosen as $dosen): ?>
+                <tr>
+                    <td>
+                        <?php echo $dosen->nip ?>
+                    </td>
+                    <td>
+                        <?php echo $dosen->nama ?>
+                    </td>
+                    <td>
+                        <?php echo $dosen->jurusan ?>
+                    </td>
+                    <td>
+                        <?php echo $dosen->alamat ?>
+                    </td>
+                    <td>
+                        <?php echo $dosen->telp ?>
+                    </td>
+                    <td>
+                        <a href="<?php echo site_url('admin/TabelDosen/edit/' .$dosen->id_dosen) ?>" class="btn btn-success" role="button" title="Ubah Data"><i class="glyphicon glyphicon-edit"></i></a>
+                        <a href="<?php echo site_url('admin/TabelDosen/delete/'.$dosen->id_dosen) ?>" class="btn btn-danger" role="button" title="Hapus Data"><i class="glyphicon glyphicon-trash"></i></a>
+                    </td>
+                </tr>
+                <?php endforeach; ?>
                 </tbody>
             </table>
         <ul class="pagination pagination-sm no-margin pull-right">

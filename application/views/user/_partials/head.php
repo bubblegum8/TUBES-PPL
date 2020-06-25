@@ -12,3 +12,28 @@
 
   <!-- Custom styles for this template-->
   <link href="<?php echo base_url();?>assets/user/css/sb-admin-2.min.css" rel="stylesheet">
+  
+  <style>
+  .sisurat{
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  a:link {
+  text-decoration: none ;
+  }
+
+  .form-judul {
+    margin: 10px;
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  .form {
+    width: 500px auto;
+    margin-bottom: 50px;
+    margin-left:auto;
+    margin-right:auto;
+  }
+  </style>
