@@ -101,6 +101,7 @@
         $pdf->Cell(40,5,"Praltik pada intansi/perusahaan yang Bapak/Ibu pimpin, yang dilaksanakan pada Tanggal:",0,0);
     
         $pdf->ln();
+        setlocale(LC_TIME, 'es_AR');
         $pdf->setX(32);
         $pdf->Cell(40,5,strftime('%d %B %Y', strtotime($surat->mulai_tgl))." sampai dengan ".strftime('%d %B %Y', strtotime($surat->akhir_tgl)).".",0,0);
 
