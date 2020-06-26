@@ -1,4 +1,27 @@
 <?php 
+        function tgl_indo($tanggal){
+            $bulan = array (
+                1 =>   'Januari',
+                'Februari',
+                'Maret',
+                'April',
+                'Mei',
+                'Juni',
+                'Juli',
+                'Agustus',
+                'September',
+                'Oktober',
+                'November',
+                'Desember'
+            );
+            $pecahkan = explode('-', $tanggal);
+            
+            // variabel pecahkan 0 = tanggal
+            // variabel pecahkan 1 = bulan
+            // variabel pecahkan 2 = tahun
+        
+            return $pecahkan[2] . ' ' . $bulan[ (int)$pecahkan[1] ] . ' ' . $pecahkan[0];
+        }
         $this->load->library('pdf');
         $pdf = new FPDF('p','mm','A4');
         $pdf->AddPage();
@@ -25,7 +48,7 @@
         $pdf->Cell(20,5,'Nomor',0,0);
         $pdf->Cell(2,5,':',0,0);
         $pdf->Cell(125,5,$surat->no_surat,0,0);
-        $pdf->Cell(90,5,"Bandung,". strftime('%d %B %Y', strtotime($surat->tanggal_surat)),0,0,'L');
+        $pdf->Cell(90,5,"Bandung,". tgl_indo($surat->tanggal_surat),0,0,'L');
         
 
         $pdf->ln();
@@ -102,7 +125,7 @@
     
         $pdf->ln();
         $pdf->setX(32);
-        $pdf->Cell(40,5,strftime('%d %B %Y', strtotime($surat->mulai_tgl))." sampai dengan ".strftime('%d %B %Y', strtotime($surat->akhir_tgl)).".",0,0);
+        $pdf->Cell(40,5,tgl_indo($surat->mulai_tgl)." sampai dengan ".tgl_indo($surat->akhir_tgl).".",0,0);
 
         $pdf->ln(10);
         $pdf->setX(40);
@@ -135,16 +158,17 @@
         $pdf->setY(215);
         $pdf->setX(125);
         $pdf->Cell(20,5,"Wakil Dekan Bidang Akademik,",0,0);
-
+        
+        $pdf->Image('assets\image\My_Gallery.png',139,225);
         $pdf->ln();
         $pdf->SetFont('Times','B',12);
-        $pdf->setY(245);
+        $pdf->setY(255);
         $pdf->setX(125);
         $pdf->Cell(20,5,"Dr. Yudha Satya Perkasa,M.Si",0,0);
 
         $pdf->SetFont('Times','',12);
         $pdf->ln();
-        $pdf->setY(250);
+        $pdf->setY(260);
         $pdf->setX(125);
         $pdf->Cell(20,5,'NIP. 197911172011011005',0,0);
 
